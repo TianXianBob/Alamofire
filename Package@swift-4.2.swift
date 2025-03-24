@@ -1,7 +1,8 @@
+// swift-tools-version:4.2
 //
-//  NSURLSessionConfiguration+AlamofireTests.swift
+//  Package.swift
 //
-//  Copyright (c) 2014-2016 Alamofire Software Foundation (http://alamofire.org/)
+//  Copyright (c) 2014 Alamofire Software Foundation (http://alamofire.org/)
 //
 //  Permission is hereby granted, free of charge, to any person obtaining a copy
 //  of this software and associated documentation files (the "Software"), to deal
@@ -22,12 +23,19 @@
 //  THE SOFTWARE.
 //
 
-import Foundation
+import PackageDescription
 
-extension String {
-    init(count: Int, repeatedString: String) {
-        var value = ""
-        for _ in 0..<count { value += repeatedString }
-        self = value
-    }
-}
+let package = Package(
+    name: "Alamofire",
+    products: [
+        .library(
+            name: "Alamofire",
+            targets: ["Alamofire"])
+    ],
+    targets: [
+        .target(
+            name: "Alamofire",
+            path: "Source")
+    ],
+    swiftLanguageVersions: [.v3, .v4]
+)

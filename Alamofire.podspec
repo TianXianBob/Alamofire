@@ -1,5 +1,5 @@
 Pod::Spec.new do |s|
-  s.name = 'Alamofire'
+  s.name = 'Alamofire_bob'
   s.version = '4.9.4'
   s.license = 'MIT'
   s.summary = 'Elegant HTTP Networking in Swift'
